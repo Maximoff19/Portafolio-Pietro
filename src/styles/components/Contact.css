@@ -1,0 +1,281 @@
+.contact {
+  width: 100vw;
+  padding: 2rem 0;
+  background: radial-gradient(ellipse at center, rgba(0,113,227,0.10) 0%, rgba(0,0,0,0.97) 80%);
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(0, 113, 227, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #ffffff, #0071e3);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  line-height: 1.2;
+}
+
+.contact-content {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background: var(--glass-background);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid var(--glass-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.contact-icons-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  width: fit-content;
+  margin-bottom: 1rem;
+}
+
+.contact-icons-wrapper a,
+.icon-btn {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--text-color);
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-icons-wrapper a svg,
+.icon-btn svg {
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.contact-icons-wrapper a:hover,
+.icon-btn:hover {
+  color: var(--primary-color);
+  background: rgba(0,113,227,0.08);
+  transform: scale(1.1);
+}
+
+.contact-icons-wrapper a:hover svg,
+.icon-btn:hover svg {
+  transform: scale(1.1);
+}
+
+/* Asegurar que el ícono de correo sea visible */
+.icon-btn svg {
+  fill: currentColor;
+  stroke: none;
+}
+
+.icon-btn span {
+  display: none;
+}
+
+.copy-notification {
+  margin-top: 1rem;
+  background: rgba(0,113,227,0.15);
+  color: var(--primary-color);
+  padding: 0.7rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(0,113,227,0.08);
+  animation: fadeInOut 1.5s;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.contact-links a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-color);
+  font-size: 1.3rem;
+  background: rgba(255,255,255,0.04);
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.contact-links a:hover {
+  background: rgba(0,113,227,0.12);
+  color: var(--primary-color);
+  box-shadow: 0 4px 16px rgba(0,113,227,0.10);
+}
+
+.contact-links span {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+@media (max-width: 992px) {
+  .contact-content {
+    max-width: 95vw;
+    padding: 2rem 1rem;
+  }
+  .contact h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    min-height: 50vh;
+    padding: 1.5rem 0;
+  }
+  .contact-content {
+    padding: 1.2rem 0.5rem;
+  }
+  .contact h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-links a {
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .contact-links span {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .contact h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-content {
+    padding: 1.2rem 0.5rem;
+  }
+
+  .contact-links a {
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .contact-links span {
+    font-size: 1rem;
+  }
+
+  .contact-icons-wrapper {
+    gap: 1.2rem;
+  }
+
+  .copy-notification {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+.contact-btn {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.contact-btn svg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  letter-spacing: 0.8px;
+  border-radius: 10px;
+  transition: all .3s;
+  border: 1px solid rgba(156, 156, 156, 0.466);
+  padding: 8px;
+  fill: white;
+}
+
+.contact-btn::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #181818;
+  z-index: -1;
+  border-radius: 10px;
+  pointer-events: none;
+  transition: all .3s;
+}
+
+.contact-btn:hover::before {
+  transform: rotate(35deg);
+  transform-origin: bottom;
+}
+
+.contact-btn:hover svg {
+  background-color: rgba(156, 156, 156, 0.466);
+  backdrop-filter: blur(4px);
+} 
