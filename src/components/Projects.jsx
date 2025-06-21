@@ -14,14 +14,22 @@ const Projects = () => {
       id: 'cashy',
       title: t.projects.cashy.title,
       description: t.projects.cashy.description,
-      images: t.projects.cashy.images,
+      coverImage: '/Portafolio_v0.02/cashylogo.jpg',
+      images: [
+        '/Portafolio_v0.02/cashy.png',
+        '/Portafolio_v0.02/[Mockup] iPhone 13.png',
+        '/Portafolio_v0.02/[Mockup] iPhone 14.png'
+      ],
       technologies: t.projects.cashy.techs
     },
     {
       id: 'batsignal',
       title: t.projects.batsignal.title,
       description: t.projects.batsignal.description,
-      images: t.projects.batsignal.images,
+      coverImage: '/Portafolio_v0.02/batimg.jpg',
+      images: [
+        '/Portafolio_v0.02/bat.png'
+      ],
       technologies: t.projects.batsignal.techs
     }
   ];
@@ -72,9 +80,15 @@ const Projects = () => {
             whileTap={{ scale: 0.98 }}
           >
             <div className="project-image">
-              {project.images && project.images.length > 0 && (
-                <img src={project.images[0]} alt={`${project.title} - Cover`} />
-              )}
+              <img 
+                src={project.coverImage} 
+                alt={`${project.title} - Cover`}
+                style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                onError={(e) => {
+                  console.error(`Error loading image: ${project.coverImage}`);
+                  e.target.style.display = 'none';
+                }}
+              />
             </div>
             <div className="project-info">
               <h3>{project.title}</h3>

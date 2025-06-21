@@ -20,7 +20,7 @@ function App() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <Hero />
+          <Hero />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -28,7 +28,7 @@ function App() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <Skills />
+          <Skills />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -36,7 +36,7 @@ function App() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <Projects />
+          <Projects />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -44,7 +44,7 @@ function App() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <Contact />
+          <Contact />
           </motion.div>
         </main>
         <Footer />

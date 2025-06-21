@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: none;
+  background: transparent;
   position: relative;
   overflow: hidden;
 }
@@ -15,7 +15,7 @@
 }
 
 .projects h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 2rem;
   background: linear-gradient(45deg, #fff, #0071e3);
   background-clip: text;
@@ -63,39 +63,23 @@
 
 .project-image {
   width: 100%;
-  height: 200px;
-  background-color: #f0f0f0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #555;
-  font-weight: 500;
-  font-size: 1.2rem;
+  height: 200px !important;
   overflow: hidden;
   position: relative;
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
-}
-
-.project-image::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to bottom, 
-    rgba(0, 0, 0, 0.2) 0%,
-    rgba(0, 0, 0, 0) 50%,
-    rgba(0, 0, 0, 0.3) 100%
-  );
-  pointer-events: none;
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #555; /* Temporal: Fondo para ver el contenedor */
 }
 
 .project-image img {
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
   object-fit: cover;
   transition: transform 0.3s ease;
+  display: block !important; /* Asegurar que la imagen se renderice como bloque */
+  opacity: 1 !important; /* Asegurar que la imagen no esté transparente */
 }
 
 .project-card:hover .project-image img {
