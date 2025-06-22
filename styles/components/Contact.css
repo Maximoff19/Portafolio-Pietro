@@ -63,15 +63,14 @@
   margin-bottom: 1rem;
 }
 
-.contact-icons-wrapper a,
 .icon-btn {
   background: none;
   border: none;
   outline: none;
   color: var(--text-color);
   cursor: pointer;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -79,48 +78,33 @@
   transition: all 0.3s ease;
   padding: 0;
   margin: 0;
+  font-size: 2.5rem;
 }
 
-.contact-icons-wrapper a svg,
-.icon-btn svg {
-  width: 40px;
-  height: 40px;
+.icon-btn i {
   transition: all 0.3s ease;
-  display: block;
 }
 
-.contact-icons-wrapper a:hover,
 .icon-btn:hover {
-  color: var(--primary-color);
+  color: var(--accent-color);
   background: rgba(0,113,227,0.08);
   transform: scale(1.1);
 }
 
-.contact-icons-wrapper a:hover svg,
-.icon-btn:hover svg {
+.icon-btn:hover i {
   transform: scale(1.1);
-}
-
-/* Asegurar que el ícono de correo sea visible */
-.icon-btn svg {
-  fill: currentColor;
-  stroke: none;
-}
-
-.icon-btn span {
-  display: none;
 }
 
 .copy-notification {
   margin-top: 1rem;
   background: rgba(0,113,227,0.15);
-  color: var(--primary-color);
+  color: var(--accent-color);
   padding: 0.7rem 1.5rem;
   border-radius: 12px;
   font-weight: 600;
   font-size: 1.1rem;
   box-shadow: 0 2px 8px rgba(0,113,227,0.08);
-  animation: fadeInOut 1.5s;
+  animation: fadeInOut 2s;
 }
 
 @keyframes fadeInOut {

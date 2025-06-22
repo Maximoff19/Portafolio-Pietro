@@ -1,14 +1,114 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pietro Osores Marchese - Desarrollador de Software</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
-</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pietro - Desarrollador de Software</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components/Header.css">
+    <link rel="stylesheet" href="styles/components/Hero.css">
+    <link rel="stylesheet" href="styles/components/Skills.css">
+    <link rel="stylesheet" href="styles/components/Projects.css">
+    <link rel="stylesheet" href="styles/components/ProjectModal.css">
+    <link rel="stylesheet" href="styles/components/Contact.css">
+    <link rel="stylesheet" href="styles/components/Footer.css">
+    <link rel="stylesheet" href="styles/components/LanguageToggle.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header" id="header">
+            <nav class="nav-container">
+                <a href="#inicio" class="nav-link" data-lang="header.home">Inicio</a>
+                <a href="#proyectos" class="nav-link" data-lang="header.projects">Proyectos</a>
+                <a href="#habilidades" class="nav-link" data-lang="header.skills">Habilidades</a>
+                <a href="#contacto" class="nav-link" data-lang="header.contact">Contacto</a>
+            </nav>
+            <div class="language-toggle-mobile-container">
+                <button class="language-toggle" id="languageToggle">
+                    <span class="language-text">ES</span>
+                    <div class="toggle-slider"></div>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section id="inicio" class="hero">
+                <div class="hero-content">
+                    <img src="yo6.png" alt="Foto de Pietro" class="hero-photo" />
+                    <h2 class="typewriter" id="typewriter">
+                        <span id="typewriterText"></span><span class="type-cursor">|</span>
+                    </h2>
+                    <p data-lang="hero.subtitle">Desarrollador de Software apasionado por crear soluciones innovadoras</p>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="habilidades" class="skills">
+                <div class="container">
+                    <h2 data-lang="skills.title">Mis Habilidades</h2>
+                    <div class="skills-container" id="skillsGrid">
+                        <!-- Skills will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="proyectos" class="projects">
+                <div class="container">
+                    <h2 data-lang="projects.title">Proyectos</h2>
+                    <div class="projects-container" id="projectsGrid">
+                        <!-- Projects will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contacto" class="contact">
+                <div class="container">
+                    <h2 data-lang="contact.title">Contacto</h2>
+                    <div class="contact-content">
+                        <div class="contact-icons-wrapper">
+                            <a href="https://github.com/Maximoff19" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="icon-btn">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/pietro-osores-marchese-7aa182192/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="icon-btn">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                            <button class="icon-btn" id="copyEmailBtn" aria-label="Copiar correo">
+                                <i class="fa-solid fa-envelope"></i>
+                            </button>
+                        </div>
+                        <div id="copy-notification" class="copy-notification" style="display: none;"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p data-lang="footer.copyright">© 2024 Pietro. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+        <!-- Project Modal -->
+        <div class="modal-overlay" id="modalOverlay">
+            <div class="modal" id="projectModal">
+                <div class="modal-content" id="modalContent">
+                    <!-- Modal content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/translations.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

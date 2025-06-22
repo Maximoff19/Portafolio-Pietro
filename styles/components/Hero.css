@@ -107,10 +107,26 @@
   50% { opacity: 0; }
 }
 
+.hero-photo {
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 2rem;
+  border: 3px solid var(--glass-border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media (max-width: 992px) {
   .hero-content {
     padding: 0 1.5rem;
     max-width: 90vw;
+  }
+  .hero-photo {
+    width: 120px;
+    height: 120px;
   }
   .hero-content h2 {
     font-size: 2.5rem;
@@ -127,6 +143,10 @@
   .hero {
     min-height: 60vh;
     padding: 0;
+  }
+  .hero-photo {
+    width: 100px;
+    height: 100px;
   }
   .hero-content {
     padding: 0 1rem;
