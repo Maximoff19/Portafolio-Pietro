@@ -188,6 +188,7 @@
   
   .project-card {
     width: 400px;
+    max-width: 90vw;
   }
 }
 
@@ -201,7 +202,6 @@
   }
   
   .project-card {
-    width: 100%;
     min-height: 400px;
   }
   

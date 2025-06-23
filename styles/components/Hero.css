@@ -145,20 +145,36 @@
     padding: 0;
   }
   .hero-photo {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
   }
   .hero-content {
     padding: 0 1rem;
   }
   .hero-content h2 {
-    font-size: 2rem;
+    font-size: 4rem;
+  }
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  .typewriter, .type-cursor {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-photo {
+    width: 110px;
+    height: 110px;
+  }
+  .typewriter, .type-cursor {
+    font-size: 3rem;
   }
   .hero-content p {
     font-size: 1rem;
   }
-  .typewriter, .type-cursor {
-    font-size: 3rem;
+  .hero-content h2 {
+    font-size: 1.8rem;
   }
 }
 
