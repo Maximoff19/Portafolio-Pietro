@@ -1,7 +1,7 @@
 .skills {
   width: 100vw;
   padding: 2rem 0;
-  background: radial-gradient(ellipse at center, rgba(0,113,227,0.10) 0%, rgba(0,0,0,0.97) 80%);
+  background: radial-gradient(ellipse at center, var(--gradient-start) 10%, var(--gradient-end) 100%);
   min-height: 70vh;
   display: flex;
   flex-direction: column;
@@ -17,8 +17,9 @@
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at center, rgba(0, 113, 227, 0.1) 0%, transparent 70%);
+  height: 80px;
+  background: linear-gradient(to bottom, var(--gradient-end) 0%, transparent 50%);
+  z-index: 1;
   pointer-events: none;
 }
 
@@ -26,7 +27,7 @@
   text-align: center;
   font-size: 2.8rem;
   margin-bottom: 2rem;
-  background: linear-gradient(90deg, #ffffff, #0071e3);
+  background: linear-gradient(90deg, var(--text-color), var(--accent-color));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -54,11 +55,11 @@
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  background: var(--glass-background);
-  backdrop-filter: blur(10px);
-  border-radius: 12px;
-  border: 1px solid var(--glass-border);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  background: rgba(80, 80, 80, 0.335);
+  backdrop-filter: blur(2px);
+  border: 1.5px solid rgba(248, 248, 248, 0.189);
+  border-radius: 20px;
+  box-shadow: 0 6px 32px 0 rgba(0,0,0,0.18), 0 1.5px 4px 0 rgba(0,0,0,0.10);
   transition: transform 0.2s, box-shadow 0.2s;
   text-align: center;
   min-height: 10px;
@@ -75,13 +76,28 @@
 
 .skill-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 24px var(--shadow-color);
 }
 
 .skill-icon {
   font-size: 2.5rem;
   color: var(--text-color);
   margin-right: 0.8rem;
+}
+
+/* Estilos específicos para íconos de Devicon */
+.skill-icon[class*="devicon-"] {
+  color: var(--text-color) !important;
+}
+
+/* Estilos específicos para íconos de Font Awesome */
+.skill-icon[class*="fa-"] {
+  color: var(--text-color) !important;
+}
+
+/* Estilo específico para Firebase */
+.devicon-firebase-plain {
+  color: var(--text-color) !important;
 }
 
 .skill-card h3 {

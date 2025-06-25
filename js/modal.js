@@ -14,6 +14,7 @@ function initModal() {
         const { title, description, techs, modalImages } = projectData;
         
         modalContent.innerHTML = `
+            <button class="modal-close-btn" aria-label="Cerrar">&times;</button>
             <div class="modal-header">
                 <h2>${title}</h2>
             </div>
@@ -31,6 +32,10 @@ function initModal() {
                 </div>
             </div>
         `;
+        
+        // Botón de cerrar
+        const closeBtn = modalContent.querySelector('.modal-close-btn');
+        closeBtn.addEventListener('click', closeModal);
         
         modalOverlay.style.display = 'flex';
         document.body.classList.add('no-scroll');

@@ -7,12 +7,45 @@
 }
 
 :root {
+  /* Modo Oscuro (predeterminado) */
   --background-color: #000000;
   --text-color: #ffffff;
   --glass-background: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.1);
   --accent-color: #007AFF;
   --hover-color: #6d9ece;
+  --card-background: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --modal-background: rgba(0, 0, 0, 0.8);
+  --gradient-start: rgba(0, 113, 227, 0.10);
+  --gradient-end: rgba(0, 0, 0, 0.97);
+}
+
+/* Modo Claro */
+[data-theme="light"] {
+  --background-color: #f8f9fa;
+  --text-color: #1a1a1a;
+  --glass-background: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --accent-color: #007AFF;
+  --hover-color: #6d9ece;
+  --card-background: rgba(255, 255, 255, 0.9);
+  --card-border: rgba(0, 0, 0, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --modal-background: rgba(0, 0, 0, 0.5);
+  --gradient-start: rgba(0, 113, 227, 0.05);
+  --gradient-end: rgba(248, 249, 250, 0.97);
+}
+
+/* Estilos globales para íconos de Devicon */
+[class*="devicon-"] {
+  color: var(--text-color) !important;
+}
+
+/* Estilos para íconos de Font Awesome */
+[class*="fa-"] {
+  color: var(--text-color) !important;
 }
 
 html, body {
@@ -33,6 +66,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .app {

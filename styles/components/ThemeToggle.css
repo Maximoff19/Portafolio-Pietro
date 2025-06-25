@@ -1,0 +1,66 @@
+.theme-toggle {
+  background: var(--glass-background);
+  backdrop-filter: blur(2px);
+  border: 1px solid var(--glass-border);
+  color: var(--text-color);
+  padding: 0.5rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow-color);
+  background: var(--accent-color);
+  color: white;
+}
+
+.theme-toggle i {
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover i {
+  transform: rotate(180deg);
+}
+
+/* Animación para el cambio de tema */
+.theme-toggle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--accent-color);
+  border-radius: 50px;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.theme-toggle:hover::before {
+  transform: scale(1);
+}
+
+/* Estilos específicos para móviles */
+@media (max-width: 768px) {
+  .theme-toggle {
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+  }
+}
+
+/* Animación de transición para todo el sitio */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+} 

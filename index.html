@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/components/Header.css">
     <link rel="stylesheet" href="styles/components/Hero.css">
+    <link rel="stylesheet" href="styles/components/About.css">
     <link rel="stylesheet" href="styles/components/Skills.css">
     <link rel="stylesheet" href="styles/components/Projects.css">
     <link rel="stylesheet" href="styles/components/ProjectModal.css">
     <link rel="stylesheet" href="styles/components/Contact.css">
     <link rel="stylesheet" href="styles/components/Footer.css">
     <link rel="stylesheet" href="styles/components/LanguageToggle.css">
+    <link rel="stylesheet" href="styles/components/ThemeToggle.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -20,17 +22,27 @@
     <div class="app">
         <!-- Header -->
         <header class="header" id="header">
-            <nav class="nav-container">
+            <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav class="nav-container" id="navContainer">
+                <button class="nav-close-btn" id="navCloseBtn" aria-label="Cerrar menú">&times;</button>
                 <a href="#inicio" class="nav-link" data-lang="header.home">Inicio</a>
+                <a href="#sobre-mi" class="nav-link" data-lang="header.about">Sobre Mí</a>
                 <a href="#proyectos" class="nav-link" data-lang="header.projects">Proyectos</a>
                 <a href="#habilidades" class="nav-link" data-lang="header.skills">Habilidades</a>
                 <a href="#contacto" class="nav-link" data-lang="header.contact">Contacto</a>
             </nav>
-            <div class="language-toggle-mobile-container">
-                <button class="language-toggle" id="languageToggle">
-                    <span class="language-text">ES</span>
-                    <div class="toggle-slider"></div>
+            <div class="header-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                    <i class="fa-solid fa-moon"></i>
                 </button>
+                <div class="language-toggle-mobile-container">
+                    <button class="language-toggle" id="languageToggle">
+                        <span class="language-text">ES</span>
+                        <div class="toggle-slider"></div>
+                    </button>
+                </div>
             </div>
         </header>
 
@@ -43,6 +55,48 @@
                         <span id="typewriterText"></span><span class="type-cursor">|</span>
                     </h2>
                     <p data-lang="hero.subtitle">Desarrollador de Software apasionado por crear soluciones innovadoras</p>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="sobre-mi" class="about">
+                <div class="about-bg-grid"></div>
+                <h2 data-lang="about.title">Sobre Mí</h2>
+                <p class="about-subtitle" data-lang="about.subtitle">Desarrollador Full-Stack apasionado por la innovación</p>
+                <div class="about-container">
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p data-lang="about.paragraph1">
+                                Soy un desarrollador de software apasionado por la tecnología y la innovación. 
+                                Me especializo en el desarrollo web full-stack, creando aplicaciones modernas 
+                                y escalables que resuelven problemas reales.
+                            </p>
+                            <p data-lang="about.paragraph2">
+                                Con experiencia en tecnologías como React, Node.js, Python y bases de datos, 
+                                disfruto trabajando en proyectos desafiantes que me permiten aprender y 
+                                crecer constantemente como desarrollador.
+                            </p>
+                            <p data-lang="about.paragraph3">
+                                Mi objetivo es crear software de calidad que no solo funcione correctamente, 
+                                sino que también proporcione una excelente experiencia de usuario y 
+                                contribuya positivamente al mundo digital.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">3+</span>
+                            <div class="stat-label" data-lang="about.years">Años de Experiencia</div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">15+</span>
+                            <div class="stat-label" data-lang="about.projects">Proyectos Completados</div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">10+</span>
+                            <div class="stat-label" data-lang="about.technologies">Tecnologías Dominadas</div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -110,5 +164,6 @@
     <script src="js/animations.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
 </body>
 </html> 

@@ -14,6 +14,16 @@ const translations = {
       cta: "Ver Proyectos",
       contact: "Contacto"
     },
+    about: {
+      title: "Sobre Mí",
+      subtitle: "Desarrollador Full-Stack apasionado por la innovación",
+      paragraph1: "Soy un desarrollador de software apasionado por la tecnología y la innovación. Me especializo en el desarrollo web full-stack, creando aplicaciones modernas y escalables que resuelven problemas reales.",
+      paragraph2: "Con experiencia en tecnologías como React, Node.js, Python y bases de datos, disfruto trabajando en proyectos desafiantes que me permiten aprender y crecer constantemente como desarrollador.",
+      paragraph3: "Mi objetivo es crear software de calidad que no solo funcione correctamente, sino que también proporcione una excelente experiencia de usuario y contribuya positivamente al mundo digital.",
+      years: "Años de Experiencia",
+      projects: "Proyectos Completados",
+      technologies: "Tecnologías Dominadas"
+    },
     skills: {
       title: "Mis Habilidades",
       items: [
@@ -27,7 +37,7 @@ const translations = {
         { name: "CSS", description: "Estilización y diseño responsivo.", icon: "devicon-css3-plain" },
         { name: "Angular", description: "Framework para aplicaciones de una sola página.", icon: "devicon-angularjs-plain" },
         { name: "TypeScript", description: "JavaScript con tipado estático.", icon: "devicon-typescript-plain" },
-        { name: "Firebase", description: "Backend-as-a-Service de Google.", icon: "devicon-firebase-plain" },
+        { name: "Firebase", description: "Backend-as-a-Service de Google.", icon: "fa-solid fa-fire" },
         { name: "C++", description: "Lenguaje de programación de alto rendimiento.", icon: "devicon-cplusplus-plain" }
       ]
     },
@@ -48,6 +58,13 @@ const translations = {
         techs: ["Swift (iOS)", "Firebase", "MapKit", "Notificaciones Push."],
         cardImage: "batimg.jpg",
         modalImages: ["bat.png"]
+      },
+      psycare: {
+        title: "PsyCare – Asistente virtual de salud mental",
+        description: "Asistente virtual de salud mental con diagnóstico temprano de ansiedad y depresión usando Google Gemini, además de un increíble gestor de citas psicológicas y herramientas de ayuda para la salud mental.",
+        techs: ["Node.js", "Google Gemini", "Express", "HTML", "CSS", "JS"],
+        cardImage: "logoPsyCare.png",
+        modalImages: ["mockup.png"]
       }
     },
     contact: {
@@ -75,6 +92,16 @@ const translations = {
       cta: "View Projects",
       contact: "Contact"
     },
+    about: {
+      title: "About Me",
+      subtitle: "Full-Stack Developer passionate about innovation",
+      paragraph1: "I am a software developer passionate about technology and innovation. I specialize in full-stack web development, creating modern and scalable applications that solve real problems.",
+      paragraph2: "With experience in technologies like React, Node.js, Python and databases, I enjoy working on challenging projects that allow me to learn and grow constantly as a developer.",
+      paragraph3: "My goal is to create quality software that not only works correctly, but also provides an excellent user experience and contributes positively to the digital world.",
+      years: "Years of Experience",
+      projects: "Completed Projects",
+      technologies: "Mastered Technologies"
+    },
     skills: {
       title: "My Skills",
       items: [
@@ -88,7 +115,7 @@ const translations = {
         { name: "CSS", description: "Styling and responsive design.", icon: "devicon-css3-plain" },
         { name: "Angular", description: "Framework for single-page applications.", icon: "devicon-angularjs-plain" },
         { name: "TypeScript", description: "JavaScript with static typing.", icon: "devicon-typescript-plain" },
-        { name: "Firebase", description: "Google's Backend-as-a-Service.", icon: "devicon-firebase-plain" },
+        { name: "Firebase", description: "Backend-as-a-Service de Google.", icon: "fa-solid fa-fire" },
         { name: "C++", description: "High-performance programming language.", icon: "devicon-cplusplus-plain" }
       ]
     },
@@ -109,6 +136,13 @@ const translations = {
         techs: ["Swift (iOS)", "Firebase", "MapKit", "Push Notifications."],
         cardImage: "batimg.jpg",
         modalImages: ["bat.png"]
+      },
+      psycare: {
+        title: "PsyCare – Virtual Mental Health Assistant",
+        description: "Virtual mental health assistant with early diagnosis of anxiety and depression using Google Gemini, plus an amazing psychological appointment manager and mental health support tools.",
+        techs: ["Node.js", "Google Gemini", "Express", "HTML", "CSS", "JS"],
+        cardImage: "logoPsyCare.png",
+        modalImages: ["mockup.png"]
       }
     },
     contact: {

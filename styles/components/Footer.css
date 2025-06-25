@@ -1,8 +1,8 @@
 .footer {
   width: 100%;
   padding: 2rem;
-  background: rgba(0, 0, 0, 0.9);
-  border-top: 1px solid var(--glass-border);
+  background: var(--card-background);
+  border-top: 1px solid var(--card-border);
 }
 
 .footer-content {

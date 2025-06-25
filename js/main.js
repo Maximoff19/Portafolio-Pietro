@@ -17,7 +17,8 @@ function updateProjects() {
     const projectsGrid = document.getElementById('projectsGrid');
     const projects = [
         translations[currentLanguage].projects.cashy,
-        translations[currentLanguage].projects.batsignal
+        translations[currentLanguage].projects.batsignal,
+        translations[currentLanguage].projects.psycare
     ];
     
     projectsGrid.innerHTML = projects.map((project, index) => `
@@ -29,7 +30,6 @@ function updateProjects() {
                 <h3>${project.title}</h3>
                 <p>${project.description.substring(0, 150)}...</p>
                 <div class="project-tech">
-                    <h4>${translations[currentLanguage].projects.technologies}:</h4>
                     <div class="tech-tags-container">
                         ${project.techs.slice(0, 3).map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
                     </div>
@@ -98,4 +98,26 @@ document.addEventListener('DOMContentLoaded', () => {
     updateProjects();
     initContact();
     initSmoothScrolling();
+
+    // Menú hamburguesa
+    const menuBtn = document.getElementById('menuBtn');
+    const navContainer = document.getElementById('navContainer');
+    if (menuBtn && navContainer) {
+        menuBtn.addEventListener('click', () => {
+            navContainer.classList.toggle('open');
+        });
+        // Cerrar menú al hacer clic en un enlace
+        navContainer.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navContainer.classList.remove('open');
+            });
+        });
+    }
+
+    const navCloseBtn = document.getElementById('navCloseBtn');
+    if (navCloseBtn) {
+        navCloseBtn.addEventListener('click', () => {
+            navContainer.classList.remove('open');
+        });
+    }
 }); 

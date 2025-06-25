@@ -1,0 +1,353 @@
+.about {
+  width: 100vw;
+  padding: 6rem 0;
+  background: linear-gradient(135deg, rgba(0,113,227,0.04) 0%, var(--gradient-end) 50%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 80px;
+  pointer-events: none;
+  background: linear-gradient(to top, var(--background-color, #0a0e17) 0%, transparent 45%);
+  z-index: 2;
+}
+
+.about::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, var(--background-color, #0a0e17) 0%, transparent 100%);
+  z-index: 2;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--text-color) 0%, var(--accent-color) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  z-index: 1;
+  letter-spacing: -0.02em;
+}
+
+.about-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  opacity: 0.7;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 1;
+  font-weight: 300;
+}
+
+.about-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.about-text {
+  color: var(--text-color);
+  line-height: 1.8;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  font-weight: 400;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 2rem;
+  text-align: left;
+}
+
+.about-text p::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.8rem;
+  width: 8px;
+  height: 8px;
+  background: var(--accent-color);
+  border-radius: 50%;
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.about-photo {
+  width: 350px;
+  height: 350px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  z-index: 2;
+}
+
+.about-photo:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+}
+
+.about-photo::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(135deg, var(--accent-color), transparent);
+  border-radius: 25px;
+  z-index: -1;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.about-photo:hover::before {
+  opacity: 0.6;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--accent-color), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.stat-item:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-color);
+}
+
+.stat-item:hover::before {
+  opacity: 0.1;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent-color), #4facfe);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 992px) {
+  .about {
+    padding: 4rem 0;
+  }
+  
+  .about h2 {
+    font-size: 2.8rem;
+  }
+  
+  .about-text p {
+    padding-left: 1.5rem;
+  }
+  
+  .about-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 3rem 0;
+    min-height: auto;
+  }
+  
+  .about h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .about-container {
+    gap: 2.5rem;
+    padding: 0 1rem;
+  }
+  
+  .about-text {
+    font-size: 1rem;
+  }
+  
+  .about-text p {
+    padding-left: 1.2rem;
+  }
+  
+  .about-text p::before {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .stat-item {
+    padding: 1.5rem 1rem;
+  }
+  
+  .stat-number {
+    font-size: 2.2rem;
+  }
+  
+  .stat-label {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 2rem 0;
+  }
+  
+  .about h2 {
+    font-size: 1.8rem;
+  }
+  
+  .about-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+  
+  .about-container {
+    gap: 2rem;
+    padding: 0 0.8rem;
+  }
+  
+  .about-text {
+    font-size: 0.9rem;
+  }
+  
+  .about-text p {
+    padding-left: 1rem;
+  }
+  
+  .about-text p::before {
+    width: 5px;
+    height: 5px;
+  }
+  
+  .about-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .stat-item {
+    padding: 1.2rem 1rem;
+  }
+  
+  .stat-number {
+    font-size: 1.8rem;
+  }
+  
+  .stat-label {
+    font-size: 0.8rem;
+  }
+}
+
+.about-bg-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  background-size: cover;
+  background-repeat: repeat;
+  opacity: 5;
+}
+
+.about {
+  position: relative;
+} 

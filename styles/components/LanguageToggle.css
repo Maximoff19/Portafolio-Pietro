@@ -1,6 +1,6 @@
 .language-toggle {
   background: var(--glass-background);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(2px);
   border: 1px solid var(--glass-border);
   color: var(--text-color);
   padding: 0.5rem 1rem;
