@@ -170,9 +170,12 @@
     gap: 1.5rem;
     margin: 0;
   }
+<<<<<<< HEAD
   .header-controls {
     gap: 0.5rem;
   }
+=======
+>>>>>>> 62fc1a83763bdfb85528fa37d3117b35fd028b70
   .language-toggle-mobile-container {
     position: static;
     display: block;
@@ -197,6 +200,7 @@
     box-shadow: none;
     transform: none;
   }
+<<<<<<< HEAD
   .menu-btn {
     display: block;
     position: absolute;
@@ -296,3 +300,6 @@
     display: none !important;
   }
 } 
+=======
+} 
+>>>>>>> 62fc1a83763bdfb85528fa37d3117b35fd028b70
