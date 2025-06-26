@@ -43,34 +43,7 @@ function updateProjects() {
 }
 
 // Contact functionality
-function initContact() {
-    const copyButton = document.getElementById('copyEmailBtn');
-    const notification = document.getElementById('copy-notification');
-    const email = 'pietro.batimoff@gmail.com';
-    
-    if (!copyButton) return;
 
-    copyButton.addEventListener('click', async () => {
-        try {
-            await navigator.clipboard.writeText(email);
-            notification.textContent = translations[currentLanguage].contact.copySuccess;
-            notification.style.display = 'block';
-            
-            setTimeout(() => {
-                notification.style.display = 'none';
-            }, 2000);
-        } catch (err) {
-            notification.textContent = translations[currentLanguage].contact.copyError;
-            notification.style.display = 'block';
-            notification.style.backgroundColor = '#f44336';
-            
-            setTimeout(() => {
-                notification.style.display = 'none';
-                notification.style.backgroundColor = '';
-            }, 2000);
-        }
-    });
-}
 
 // Smooth scrolling for navigation links
 function initSmoothScrolling() {
@@ -120,3 +93,4 @@ document.addEventListener('DOMContentLoaded', () => {
             navContainer.classList.remove('open');
         });
     }
+}); 
