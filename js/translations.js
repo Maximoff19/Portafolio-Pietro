@@ -69,12 +69,7 @@ const translations = {
     },
     contact: {
       title: "Contacto",
-      name: "Nombre",
-      email: "Email",
-      message: "Mensaje",
-      send: "Enviar Mensaje",
-      or: "O",
-      copyEmail: "Copiar Correo",
+      email: "Copiar Correo",
       copySuccess: "¡Correo copiado!",
       copyError: "Error al copiar"
     },
@@ -152,12 +147,7 @@ const translations = {
     },
     contact: {
       title: "Contact",
-      name: "Name",
-      email: "Email",
-      message: "Message",
-      send: "Send Message",
-      or: "Or",
-      copyEmail: "Copy Email",
+      email: "Copy Email",
       copySuccess: "Email copied!",
       copyError: "Error copying"
     },
