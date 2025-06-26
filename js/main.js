@@ -120,4 +120,3 @@ document.addEventListener('DOMContentLoaded', () => {
             navContainer.classList.remove('open');
         });
     }
-}); 
