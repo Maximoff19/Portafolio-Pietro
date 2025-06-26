@@ -16,9 +16,9 @@ const translations = {
     },
     about: {
       title: "Sobre Mí",
-      subtitle: "Desarrollador Full-Stack apasionado por la innovación",
-      paragraph1: "Soy un desarrollador de software apasionado por la tecnología y la innovación. Me especializo en el desarrollo web full-stack, creando aplicaciones modernas y escalables que resuelven problemas reales.",
-      paragraph2: "Con experiencia en tecnologías como React, Node.js, Python y bases de datos, disfruto trabajando en proyectos desafiantes que me permiten aprender y crecer constantemente como desarrollador.",
+      subtitle: "Desarrollador Mobile apasionado por la innovación",
+      paragraph1: "Soy un desarrollador de software apasionado por la tecnología y la innovación. Me especializo en el desarrollo mobile para iOS, creando aplicaciones modernas y escalables que resuelven problemas reales.",
+      paragraph2: "Tengo experiencia en tecnologías como React, Node.js, Python y bases de datos, disfruto trabajando en proyectos desafiantes que me permiten aprender y crecer constantemente como desarrollador.",
       paragraph3: "Mi objetivo es crear software de calidad que no solo funcione correctamente, sino que también proporcione una excelente experiencia de usuario y contribuya positivamente al mundo digital.",
       years: "Años de Experiencia",
       projects: "Proyectos Completados",
@@ -94,8 +94,8 @@ const translations = {
     },
     about: {
       title: "About Me",
-      subtitle: "Full-Stack Developer passionate about innovation",
-      paragraph1: "I am a software developer passionate about technology and innovation. I specialize in full-stack web development, creating modern and scalable applications that solve real problems.",
+      subtitle: "Mobile iOS Developer passionate about innovation",
+      paragraph1: "I am a software developer passionate about technology and innovation. I specialize in mobile development for iOS, creating modern and scalable applications that solve real-world problems.",
       paragraph2: "With experience in technologies like React, Node.js, Python and databases, I enjoy working on challenging projects that allow me to learn and grow constantly as a developer.",
       paragraph3: "My goal is to create quality software that not only works correctly, but also provides an excellent user experience and contributes positively to the digital world.",
       years: "Years of Experience",
