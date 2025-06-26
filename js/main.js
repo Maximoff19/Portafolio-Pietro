@@ -43,7 +43,30 @@ function updateProjects() {
 }
 
 // Contact functionality
-
+function initContact() {
+    const copyEmailBtn = document.getElementById('copyEmailBtn');
+    const notification = document.getElementById('copy-notification');
+    // Cambia este correo por el tuyo si es necesario
+    const email = 'pietroxz19@gmail.com';
+    if (copyEmailBtn) {
+        copyEmailBtn.addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText(email);
+                notification.textContent = translations[currentLanguage].contact.copySuccess;
+                notification.style.display = 'block';
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 1800);
+            } catch (err) {
+                notification.textContent = translations[currentLanguage].contact.copyError;
+                notification.style.display = 'block';
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 1800);
+            }
+        });
+    }
+}
 
 // Smooth scrolling for navigation links
 function initSmoothScrolling() {
