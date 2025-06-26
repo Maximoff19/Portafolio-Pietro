@@ -125,6 +125,26 @@
                 <div class="container">
                     <h2 data-lang="contact.title">Contacto</h2>
                     <div class="contact-content">
+                        <div class="contact-form-container">
+                            <form id="contactForm" class="contact-form">
+                                <div class="form-group">
+                                    <label for="name" data-lang="contact.name">Nombre</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" data-lang="contact.email">Email</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message" data-lang="contact.message">Mensaje</label>
+                                    <textarea id="message" name="message" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="submit-btn" data-lang="contact.send">Enviar Mensaje</button>
+                            </form>
+                        </div>
+                        <div class="contact-divider">
+                            <span data-lang="contact.or">O</span>
+                        </div>
                         <div class="contact-icons-wrapper">
                             <a href="https://github.com/Maximoff19" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="icon-btn">
                                 <i class="fa-brands fa-github"></i>
@@ -132,11 +152,11 @@
                             <a href="https://www.linkedin.com/in/pietro-osores-marchese-7aa182192/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="icon-btn">
                                 <i class="fa-brands fa-linkedin"></i>
                             </a>
-                            <button class="icon-btn" id="copyEmailBtn" aria-label="Copiar correo">
+                            <button class="icon-btn" id="emailBtn" aria-label="Copiar correo">
                                 <i class="fa-solid fa-envelope"></i>
                             </button>
                         </div>
-                        <div id="copy-notification" class="copy-notification" style="display: none;"></div>
+                        <div id="copySuccess" class="copy-notification" style="display: none;" data-lang="contact.copySuccess">¡Correo copiado!</div>
                     </div>
                 </div>
             </section>
@@ -163,6 +183,7 @@
     <script src="js/language.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/modal.js"></script>
+    <script src="js/contact.js"></script>
     <script src="js/main.js"></script>
     <script src="js/theme.js"></script>
 </body>
